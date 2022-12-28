@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>Education Meeting HTML5 Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="ligtbox.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="fontawesome.css">
+    <link rel="stylesheet" href="templatemo-edu-meeting.css">
+    <link rel="stylesheet" href="owl.css">
+    <link rel="stylesheet" href="lightbox.css">
+<!--
+
+TemplateMo 569 Edu Meeting
+
+https://templatemo.com/tm-569-edu-meeting
+
+-->
+  </head>
+
+<body>
+    
+    
+    <h1>VOORDELEN
+</h1>
+    <p>Het importeren van een auto lijkt vaak lastig en je zal je misschien afvragen of dit wel aantrekkelijk is om te doen. Een auto uit het buitenland halen brengt echter veel voordelen met zich mee. Door de zoektocht niet te beperken tot Nederland groeit het aanbod exponentieel waardoor je geen concessies hoeft te doen. Daarnaast is het in veel gevallen goedkoper om een auto te importeren, dan wanneer je dezelfde auto in Nederland zou aanschaffen.</p>
+    
+    <h2>Kritisch</h2>
+    <p>Hoewel wij met regelmaat een auto importeren zal dat voor jou waarschijnlijk niet het geval zijn. Daarom zijn wij altijd extra kritisch voordat de auto wordt ingevoerd. We controleren de auto en zorgen dat deze aan onze standaard voldoet. Wanneer dit niet het geval is raden we de import van de auto af en zoeken we graag verder.</p>
+    
+    
+    <h3>RISICO'S</h3>
+    <p>Wanneer je zelf een auto importeert brengt dat risico's met zich mee. Je kunt dan tegen onaangename verrassingen aanlopen. Voorkom dit door hulp te zoeken bij het importproces. Wij kunnen het gehele proces voor je uit handen nemen. Op deze manier minimaliseer je de risico's en hoef je je geen zorgen te maken.</p>
+
+  
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/video.js"></script>
+    <script src="assets/js/slick-slider.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+          var
+          direction = section.replace(/#/, ''),
+          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+          reqSectionPos = reqSection.offset().top - 0;
+
+          if (isAnimate) {
+            $('body, html').animate({
+              scrollTop: reqSectionPos },
+            800);
+          } else {
+            $('body, html').scrollTop(reqSectionPos);
+          }
+
+        };
+
+        var checkSection = function checkSection() {
+          $('.section').each(function () {
+            var
+            $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+              var
+              currentId = $this.data('section'),
+              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+              reqLink.closest('li').addClass('active').
+              siblings().removeClass('active');
+            }
+          });
+        };
+
+        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+          e.preventDefault();
+          showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+          checkSection();
+        });
+    </script>
+</body>
+
+</body>
+</html>
